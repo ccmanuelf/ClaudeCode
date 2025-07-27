@@ -11,16 +11,16 @@ Transform your development workflow with ClaudeCode - the intelligent developmen
 Get productive in under 2 minutes:
 
 ```bash
-# 1. Navigate to your ClaudeCode directory
-cd ClaudeCode
+# 1. Clone the ClaudeCode framework
+git clone https://github.com/ccmanuelf/ClaudeCode.git
 
-# 2. Start your development session
-python resume.py
+# 2. Activate Professor Spark in your AI tool
+# Copy the appropriate template or prompt from templates/ or prompts/
 
-# 3. Follow the interactive prompts - that's it! 🎉
+# 3. Start collaborating with consistent AI behavior! 🎉
 ```
 
-**First time?** The system will guide you through project initialization and help you get started immediately.
+**First time?** Choose a template from `templates/` for persistent activation or use prompts from `prompts/` for immediate use.
 
 ---
 
@@ -57,7 +57,7 @@ ClaudeCode now includes **Professor Spark ⚡️** - an advanced analytical assi
 - **🧠 Qwen-Code**: Enhanced coding workflows with Git integration
 - **🤖 Claude Tools**: Reasoning excellence with safety integration
 
-**Quick Setup**: Run `./scripts/setup.sh` or `python3 scripts/setup.py` to automatically detect and configure your AI tools with the Professor Spark persona.
+**Quick Setup**: Choose a template from `templates/` directory for persistent activation or use prompts from `prompts/` directory for immediate activation with your AI tool.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -156,39 +156,39 @@ Ready to continue with P1.2.1? Please confirm understanding.
 ### **Creating Manual Checkpoints**
 
 ```bash
-# Save your progress anytime
-python resume.py checkpoint "Template engine implementation complete"
+# Use Professor Spark's built-in session management
+/cache save "Template engine analysis complete"
 
 # Output:
-✅ Checkpoint CP008 created: Template engine implementation complete
-🔄 Recovery command: /recover_from_checkpoint CP008
+✅ Analysis cached: Template engine analysis complete
+🔄 Reference: Use /cache use latest to restore context
 ```
 
 ### **Recovery Operations**
 
 ```bash
-# List available recovery points
-python scripts/checkpoint_recovery.py list
+# Restore previous analytical context
+/cache list
 
-# Recover from specific checkpoint
-python scripts/checkpoint_recovery.py recover CP005
+# Load specific cached analysis
+/cache use [analysis-id]
 
-# Emergency recovery (uses latest valid checkpoint)
-python scripts/checkpoint_recovery.py emergency
+# Start fresh with framework context
+# Use SESSION_INITIALIZATION.md prompt again
 ```
 
 ### **Project Initialization Workflow**
 
 ```bash
 # For brand new projects
-python resume.py
+# Activate ClaudeCode framework with your AI tool
 
-# Follow interactive setup:
-1. Choose project type (Python, JavaScript, etc.)
-2. Configure development environment
-3. Set up quality gates and testing
-4. Initialize first specifications
-5. Begin development with guided workflows
+# Professor Spark will guide you through:
+1. Project analysis and planning with Tree of Thoughts
+2. Technology stack recommendations  
+3. Architecture design with Graph of Thoughts
+4. Specs-driven development methodology
+5. Quality standards and best practices
 ```
 
 ---
@@ -197,35 +197,35 @@ python resume.py
 
 ### **Primary Interface**
 ```bash
-python resume.py                    # Interactive development session
-python resume.py status             # Quick progress check
-python resume.py checkpoint "desc"  # Create manual checkpoint
-python resume.py task P1.2.3        # Switch to specific task
-python resume.py recovery           # Access recovery options
-python resume.py help               # Show all commands
+/help                              # Show Professor Spark capabilities
+/mode [lite|standard|pro]          # Switch analytical modes
+/analyze [topic]                   # Deep analytical reasoning
+/framework [chain|tree|graph]      # Select reasoning approach
+/cache save "description"          # Save analysis context
+/cache list                        # Show saved contexts
 ```
 
 ### **Checkpoint System**
 ```bash
-# Auto-checkpoint daemon
-python scripts/auto_checkpoint.py start      # Start auto-checkpointing
-python scripts/auto_checkpoint.py status     # Check daemon status
-python scripts/auto_checkpoint.py checkpoint # Force checkpoint creation
+# Context Management Commands
+/cache                             # Toggle cache usage
+/cache save "context description"  # Save current analysis
+/cache list                        # Show available contexts
+/cache use [context-id]           # Load specific context
+/cache clear                      # Clear cache
 
-# Recovery operations  
-python scripts/checkpoint_recovery.py list          # List checkpoints
-python scripts/checkpoint_recovery.py validate CP001 # Validate checkpoint
-python scripts/checkpoint_recovery.py recover CP001  # Recover from checkpoint
-python scripts/checkpoint_recovery.py emergency     # Emergency recovery
-python scripts/checkpoint_recovery.py rebuild       # Rebuild from files
+# Framework Management
+/framework status                 # Show current framework state
+/mode                            # Switch between analysis modes
+/reset                           # Reset to initial framework state
 ```
 
 ### **Advanced Operations**
 ```bash
-# Direct progress management
-python scripts/claudecode_commands.py /resume_progress     # Full resume
-python scripts/claudecode_commands.py /progress_status     # Status check
-python scripts/claudecode_commands.py /analyze_blocker     # Get help when stuck
+# Direct Professor Spark commands
+/start                           # Initialize new collaboration session
+/analyze [problem]               # Comprehensive problem analysis
+/help                           # Show all available commands
 ```
 
 ---
@@ -290,23 +290,25 @@ As a user, I want to log in securely so that I can access protected features.
 ### **2. AI Implementation**
 With clear specs, delegate implementation:
 ```bash
-# System loads spec as context and implements precisely
-python resume.py
+# Professor Spark analyzes spec and guides implementation
+/analyze "user authentication system specification"
 
-# AI implements following the spec exactly:
-# - Creates necessary files
-# - Implements all acceptance criteria  
-# - Writes comprehensive tests
-# - Updates documentation
+# Professor Spark provides:
+# - Implementation strategy with Tree of Thoughts
+# - Step-by-step development plan
+# - Quality checkpoints and validation criteria
+# - Best practices and potential pitfalls
 ```
 
 ### **3. Review and Iterate**
 ```bash
-# Validate implementation against spec
-# Create checkpoint after validation
-python resume.py checkpoint "User authentication system implemented"
+# Review implementation with Professor Spark
+/evaluate "user authentication implementation vs specification"
 
-# Move to next specification
+# Cache completed analysis
+/cache save "User authentication system - implementation complete"
+
+# Move to next specification with preserved context
 ```
 
 ---
@@ -342,25 +344,25 @@ Each checkpoint contains:
 **Scenario 1: Daily Resume**
 ```bash
 # Yesterday: Working on user authentication
-# Today: Resume exactly where you left off
-python resume.py
-# ✅ Full context restored, ready to continue
+# Today: Restore context with Professor Spark
+/cache use "user-authentication-analysis"
+# ✅ Full analytical context restored, ready to continue
 ```
 
 **Scenario 2: Context Window Exceeded**
 ```bash
-# System automatically triggers emergency handoff
-🚨 EMERGENCY CHECKPOINT TRIGGERED
-💾 Checkpoint CP008 created successfully
-🔄 TO RESUME: Start new session, run 'python resume.py'
+# Session handoff preparation with Professor Spark
+/cache save "emergency-handoff-context"
+💾 Analysis context saved successfully
+🔄 TO RESUME: Use SESSION_INITIALIZATION.md + /cache use latest
 ```
 
 **Scenario 3: Accidental Data Loss**
 ```bash
-# Recover from any previous checkpoint
-python scripts/checkpoint_recovery.py list
-python scripts/checkpoint_recovery.py recover CP005
-# ✅ Full state restored with backup created
+# Restore previous analytical session
+/cache list
+/cache use [previous-session-id]
+# ✅ Full context restored with Professor Spark
 ```
 
 ---
@@ -424,29 +426,30 @@ quality_gates:
 
 ### **Quick Setup**
 ```bash
-# 1. Clone or set up ClaudeCode in your project
-cd your-project-directory
+# 1. Clone ClaudeCode framework
+git clone https://github.com/ccmanuelf/ClaudeCode.git
 
-# 2. Install dependencies (if using Python)
-pip install -r requirements.txt
+# 2. Choose activation method:
+# Option A: Template (persistent) - Copy from templates/
+# Option B: Prompt (immediate) - Copy from prompts/
 
-# 3. Initialize ClaudeCode
-python resume.py
+# 3. Activate in your AI tool
+# Use SESSION_INITIALIZATION.md or chosen template
 
-# 4. Follow the setup wizard
-# ✅ That's it! Start developing with AI assistance
+# 4. Start collaborating with Professor Spark
+# ✅ Consistent AI behavior across all providers!
 ```
 
 ### **Advanced Setup**
 ```bash
-# Enable auto-checkpoint daemon for maximum safety
-python scripts/auto_checkpoint.py start
+# Enable Professor Spark's cache system for context preservation
+/cache  # Enable caching
 
-# Configure GitHub integration (optional)
-# Update config.yaml with your repository settings
+# Customize framework for your needs
+# Edit collaboration_protocols/ and development_standards/
 
-# Set up quality gates
-# Configure pre-commit hooks and testing requirements
+# Apply quality standards
+# Professor Spark will follow development_standards/ guidelines
 ```
 
 ---
@@ -478,16 +481,18 @@ ClaudeCode/
 ### **Typical Development Session**
 ```
 Day 1: Start new feature
-├─ python resume.py
-├─ Create specification: "User profile editing"  
-├─ Implement with AI assistance
-├─ Auto-checkpoint every 30 minutes
-└─ End session: python resume.py checkpoint "Profile UI complete"
+├─ Activate Professor Spark with ClaudeCode
+├─ /analyze "User profile editing requirements"
+├─ Develop with consistent AI guidance
+├─ /cache save "Profile UI analysis complete"
+└─ End session with preserved context
 
 Day 2: Continue development  
-├─ python resume.py  
+├─ Reactivate Professor Spark
+├─ /cache use "Profile UI analysis complete"
 ├─ Perfect context restoration
 ├─ Continue with backend implementation
+├─ Complete feature with specs validation
 └─ Deploy with confidence
 
 Result: 60% faster development, zero lost context
@@ -495,13 +500,14 @@ Result: 60% faster development, zero lost context
 
 ### **Emergency Recovery Success**
 ```
-Scenario: Laptop crash during critical development
-├─ Restart system
-├─ python scripts/checkpoint_recovery.py emergency
-├─ Full state restored from 15 minutes ago
-└─ Continue development without missing a beat
+Scenario: Switching between AI providers mid-project
+├─ Working with Claude in morning
+├─ Switch to ChatGPT in afternoon
+├─ Activate ClaudeCode framework
+├─ Same Professor Spark persona and behavior
+└─ Seamless transition, no context loss
 
-Result: Maximum 15 minutes of work lost (auto-checkpoint interval)
+Result: Consistent analytical partner regardless of AI provider
 ```
 
 ---
@@ -530,9 +536,10 @@ ClaudeCode/
 
 ### **Automated Setup (Recommended)**
 ```bash
-# From ClaudeCode directory
-./scripts/setup.sh         # Bash version
-python3 scripts/setup.py   # Python version
+# Choose your activation method:
+cp templates/claude-tools/CLAUDE.md ./CLAUDE.md     # For Claude tools
+cp templates/gemini-cli/GEMINI.md ~/.gemini/       # For Gemini CLI
+# Or use prompts/ for copy-paste activation
 ```
 
 The setup will:
@@ -557,8 +564,8 @@ cp templates/claude-tools/CLAUDE.md ./CLAUDE.md
 ```
 
 ### **For Maximum Productivity**
-1. **Start every session with `python resume.py`**
-2. **Create manual checkpoints before major changes**
+1. **Start every session with ClaudeCode framework activation**
+2. **Use /cache save before switching contexts or AI providers**
 3. **Write clear specifications before implementation**
 4. **Use the interactive interface for complex workflows**
 5. **Enable auto-checkpoint daemon for long sessions**
@@ -637,24 +644,24 @@ python scripts/checkpoint_recovery.py emergency
 
 **Issue**: "Context seems outdated"
 ```bash
-# Solution: Validate and refresh
-python resume.py
-# Choose option 3: "Check detailed status"
+# Solution: Reactivate framework
+# Use SESSION_INITIALIZATION.md prompt again
+# Or reload your template configuration
 ```
 
 ### **Emergency Procedures**
-1. **Complete data loss**: `python scripts/checkpoint_recovery.py rebuild`
-2. **Corrupted checkpoints**: `python scripts/checkpoint_recovery.py emergency`
-3. **Session confusion**: `python resume.py status` then `python resume.py`
+1. **Framework not responding**: Try `/help` to verify activation
+2. **Lost context**: Use `/cache list` and `/cache use [id]` to restore
+3. **AI behavior inconsistent**: Reactivate using SESSION_INITIALIZATION.md
 
 ---
 
 ## 📞 **Support & Community**
 
 ### **Getting Help**
-- **Built-in Help**: `python resume.py help`
-- **Command Reference**: See `progress-state/RESUME_COMMANDS.md`
-- **System Documentation**: See `progress-state/` directory
+- **Built-in Help**: Use `/help` command with Professor Spark
+- **Framework Reference**: See `SESSION_INITIALIZATION.md`
+- **Usage Examples**: See `examples/` directory
 
 ### **Community Resources**
 - Share your workflows and templates
@@ -674,8 +681,8 @@ ClaudeCode is designed to enhance your development workflow while maintaining co
 Ready to transform your development experience?
 
 ```bash
-cd ClaudeCode
-python resume.py
+git clone https://github.com/ccmanuelf/ClaudeCode.git
+# Then activate with your preferred AI tool using templates/ or prompts/
 ```
 
 **That's it!** ClaudeCode will guide you through everything else.

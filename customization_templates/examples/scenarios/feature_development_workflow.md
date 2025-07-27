@@ -16,11 +16,11 @@
 
 ### Step 1: Initialize Feature Planning
 ```bash
-# Start ClaudeCode session
-python resume.py
+# Activate ClaudeCode framework with your AI tool
+# Use SESSION_INITIALIZATION.md or appropriate template
 
 # Create planning document
-cp agent-config/command_templates/planning_template.md planning/user_profile_feature.md
+cp development_standards/command_templates/planning_template.md planning/user_profile_feature.md
 ```
 
 ### Step 2: Define Feature Specification
@@ -80,10 +80,8 @@ cp agent-config/command_templates/do_task_template.md tasks/user_profile_impleme
 
 ### Step 4: Initial Checkpoint
 ```bash
-# Create planning checkpoint
-python resume.py
-# Choose option 2: Create checkpoint
-# Description: "User profile feature - planning complete, ready for implementation"
+# Save planning context with Professor Spark
+/cache save "User profile feature - planning complete, ready for implementation"
 ```
 
 ## Phase 2: Database & Backend Implementation
@@ -150,10 +148,8 @@ class UserProfile(models.Model):
 # Run migration
 python manage.py migrate  # or your migration command
 
-# Create checkpoint
-python resume.py
-# Choose option 2: Create checkpoint
-# Description: "User profiles - database schema implemented and migrated"
+# Save progress context
+/cache save "User profiles - database schema implemented and migrated"
 ```
 
 ## Phase 3: API Endpoints Development
@@ -214,10 +210,8 @@ class UserProfileViewSet(viewsets.ModelViewSet):
 curl -X GET http://localhost:8000/api/profiles/me/ \
   -H "Authorization: Bearer YOUR_TOKEN"
 
-# Create checkpoint
-python resume.py
-# Choose option 2: Create checkpoint  
-# Description: "User profiles - API endpoints implemented, basic testing complete"
+# Save implementation context
+/cache save "User profiles - API endpoints implemented, basic testing complete"
 ```
 
 ## Phase 4: Frontend Implementation
