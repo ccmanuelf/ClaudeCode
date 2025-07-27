@@ -289,33 +289,33 @@ python scripts/extract_requirements.py \
 ### Automated Analysis Tools
 
 #### Requirements Extraction Script
-```python
-# Extract requirements from various document formats
-python scripts/extract_requirements.py \
-  --source-dir "docs/requirements/" \
-  --output-format "markdown" \
-  --create-traceability-matrix \
-  --generate-acceptance-criteria
+```bash
+# Extract requirements from various document formats with Professor Spark
+/analyze "Extract requirements from docs/requirements/ directory"
+# Professor Spark will guide you through:
+# - Requirement identification and categorization
+# - Traceability matrix creation
+# - Acceptance criteria generation
 ```
 
 #### Document Parsing and Conversion
-```python
-# Convert and process various document formats
-python scripts/process_documents.py \
-  --input-dir "docs/" \
-  --convert-to-markdown \
-  --extract-metadata \
-  --create-search-index
+```bash
+# Convert and process various document formats with Professor Spark
+/analyze "Document processing strategy for docs/ directory"
+# Professor Spark will provide:
+# - Format conversion recommendations
+# - Metadata extraction guidance
+# - Search optimization strategies
 ```
 
 #### Context Generation for AI
-```python
-# Generate AI-friendly context from documentation
-python scripts/generate_ai_context.py \
-  --docs-dir "docs/" \
-  --output-dir "context/" \
-  --include-summaries \
-  --create-knowledge-graph
+```bash
+# Generate AI-friendly context from documentation with Professor Spark
+/analyze "AI context generation from docs/ for knowledge management"
+# Professor Spark will help create:
+# - Documentation summaries and abstracts
+# - Knowledge relationship mapping
+# - Context-aware information architecture
 ```
 
 ## Quality Assurance for Integrated Documentation

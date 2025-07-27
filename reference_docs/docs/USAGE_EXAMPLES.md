@@ -21,8 +21,8 @@ This guide provides comprehensive, real-world examples of using ClaudeCode for A
 ## Quick Start (15 minutes)
 
 ### Prerequisites
-- Python 3.8+ installed
-- Git repository initialized
+- Any AI CLI tool (Claude, ChatGPT, Gemini, Qwen-Code, etc.)
+- Git repository (optional, for version control)
 - 15 minutes of focused time
 
 ### Step 1: Initial Setup

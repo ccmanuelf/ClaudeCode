@@ -31,8 +31,8 @@ Verify that the developer’s local environment is correctly configured before b
 
 3. Confirm project dependencies are installed  
    - Node.js: run `npm ci` and expect exit code 0  
-   - Python: run `pip install -r requirements.txt` and expect exit code 0  
    - Java/Maven: run `mvn dependency:resolve` and expect a successful build  
+   - AI CLI Tools: verify your AI tool is accessible (e.g., `claude --version`, `gemini --help`)
 
 4. Run baseline tests or lint checks  
    - Node.js: `npm test -- --watchAll=false`  

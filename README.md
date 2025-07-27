@@ -420,8 +420,8 @@ quality_gates:
 ## 🔧 **Installation & Setup**
 
 ### **Prerequisites**
-- Python 3.8+
-- Git with pre-commit hooks support
+- Any AI CLI tool (Claude, ChatGPT, Gemini, Qwen-Code, etc.)
+- Git (optional, for version control)
 - Your preferred development environment
 
 ### **Quick Setup**
@@ -468,10 +468,11 @@ ClaudeCode/
 │   ├── guardrails/                    # Quality enforcement rules
 │   ├── templates/                     # Project templates
 │   └── prompts/                       # AI prompt frameworks
-└── scripts/
-    ├── resume_progress.py             # Core progress engine
-    ├── auto_checkpoint.py             # Automatic checkpoint daemon
-    └── checkpoint_recovery.py         # Recovery system
+└── templates/                         # AI tool configuration templates
+    ├── claude-tools/                  # Claude-based tools
+    ├── gemini-cli/                    # Google Gemini CLI
+    ├── opencode/                      # OpenCode CLI
+    └── qwen-code/                     # Qwen-Code CLI
 ```
 
 ---
@@ -518,16 +519,14 @@ Result: Consistent analytical partner regardless of AI provider
 
 ```
 ClaudeCode/
-├── claude.md              # Core framework specification
-├── templates/              # Provider-specific configurations
-│   ├── gemini-cli/        # Google Gemini CLI setup
-│   ├── opencode/          # OpenCode CLI setup  
-│   ├── qwen-code/         # Qwen-Code CLI setup
-│   └── claude-tools/      # Claude-based tools setup
-├── scripts/               # Setup and deployment scripts
-│   ├── setup.sh          # Bash setup script
-│   └── setup.py          # Python setup script
-├── progress-state/        # Session state management
+├── SESSION_INITIALIZATION.md         # Framework activation guide
+├── templates/                         # Provider-specific configurations
+│   ├── gemini-cli/                   # Google Gemini CLI setup
+│   ├── opencode/                     # OpenCode CLI setup  
+│   ├── qwen-code/                    # Qwen-Code CLI setup
+│   └── claude-tools/                 # Claude-based tools setup
+├── prompts/                          # Copy-paste activation prompts
+├── collaboration_protocols/          # AI behavior guidelines
 ├── agent-config/         # Core agent configurations
 └── [existing structure]   # Previous framework components
 ```
@@ -632,14 +631,15 @@ ClaudeCode is built with extensibility in mind:
 
 **Issue**: "Progress state file not found"
 ```bash
-# Solution: Initialize new progress state
-python scripts/checkpoint_recovery.py rebuild
+# Solution: Reactivate framework
+# Use SESSION_INITIALIZATION.md prompt again
 ```
 
 **Issue**: "Checkpoint recovery failed"  
 ```bash
-# Solution: Try emergency recovery
-python scripts/checkpoint_recovery.py emergency
+# Solution: Check cache and restore context
+/cache list
+/cache use [previous-session-id]
 ```
 
 **Issue**: "Context seems outdated"

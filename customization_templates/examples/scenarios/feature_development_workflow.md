@@ -279,10 +279,8 @@ export default ProfileView;
 # Test frontend components
 npm start  # or your dev server command
 
-# Create checkpoint
-python resume.py
-# Choose option 2: Create checkpoint
-# Description: "User profiles - frontend components implemented, basic UI working"
+# Save progress context
+/cache save "User profiles - frontend components implemented, basic UI working"
 ```
 
 ## Phase 5: Testing & Validation
@@ -352,10 +350,8 @@ pytest --cov=src/api/profiles tests/api/profiles/
 
 ### Step 14: Testing Checkpoint
 ```bash
-# Create checkpoint after testing
-python resume.py
-# Choose option 2: Create checkpoint
-# Description: "User profiles - comprehensive test suite implemented, all tests passing"
+# Save testing context
+/cache save "User profiles - comprehensive test suite implemented, all tests passing"
 ```
 
 ## Phase 6: Integration & Deployment Preparation
@@ -397,10 +393,8 @@ Update current user's profile
 
 ### Step 17: Final Feature Checkpoint
 ```bash
-# Create completion checkpoint
-python resume.py
-# Choose option 2: Create checkpoint
-# Description: "User profiles feature COMPLETE - ready for code review and deployment"
+# Save completion context
+/cache save "User profiles feature COMPLETE - ready for code review and deployment"
 ```
 
 ## Phase 7: Code Review & Deployment

@@ -251,26 +251,26 @@ cp templates/do_task_template.md tasks/task_{task_id}_{task_name}.md
 
 ### **2. Progress Management**
 ```bash
-# Update progress state
-python scripts/resume_progress.py update_task {task_id} {completion_percentage}
+# Update progress with Professor Spark
+/cache save "Task {task_id} - {milestone_description} - {completion_percentage}% complete"
 
-# Create checkpoint
-python scripts/resume_progress.py checkpoint "Task {task_id} - {milestone_description}"
+# Track current context
+/analyze "Task {task_id} progress and next steps"
 
-# Track blockers
-python scripts/resume_progress.py analyze_blocker "{blocker_description}"
+# Handle blockers
+/analyze "Blocker analysis: {blocker_description}"
 ```
 
 ### **3. Quality Gates**
 ```bash
-# Run quality checks
-python scripts/quality_check.py --task {task_id}
+# Quality review with Professor Spark
+/evaluate "Task {task_id} quality assessment and deliverables"
 
-# Validate deliverables
-python scripts/validate_deliverables.py --task {task_id}
+# Validate completion criteria
+/analyze "Task {task_id} acceptance criteria validation"
 
-# Generate completion report
-python scripts/task_report.py --task {task_id}
+# Generate completion summary
+/cache save "Task {task_id} COMPLETE - deliverables validated"
 ```
 
 ## Best Practices

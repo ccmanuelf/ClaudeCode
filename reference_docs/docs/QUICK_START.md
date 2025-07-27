@@ -5,8 +5,8 @@
 This guide gets you from zero to productive ClaudeCode usage in just 15 minutes. No deep dives, just the essentials to start enhancing your development workflow immediately.
 
 ## Prerequisites ✅
-- Python 3.8+ installed
-- Git repository (existing or new)
+- Any AI CLI tool (Claude, ChatGPT, Gemini, Qwen-Code, etc.)
+- Git repository (optional, for version control)
 - Command line access
 - 15 minutes of focused time
 

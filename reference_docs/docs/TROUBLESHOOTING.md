@@ -240,23 +240,15 @@ PYTHONPATH=. python resume.py
 #### Missing Dependencies
 ```bash
 # Check for required modules
-python -c "
-import sys
-missing = []
-try: import yaml
-except ImportError: missing.append('PyYAML')
-try: import json
-except ImportError: missing.append('json')
+# Check if your AI CLI tool is properly installed and accessible
+which claude-cli  # or your specific AI tool
+# OR
+gemini --version
+# OR  
+opencode --help
 
-if missing:
-    print(f'❌ Missing: {missing}')
-    print('Install with: pip install ' + ' '.join(missing))
-else:
-    print('✅ All dependencies available')
-"
-
-# Install missing dependencies
-pip install PyYAML
+# Verify ClaudeCode framework activation
+# Use SESSION_INITIALIZATION.md prompt with your AI tool
 ```
 
 #### Script Permissions
