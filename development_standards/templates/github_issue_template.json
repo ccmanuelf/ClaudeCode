@@ -1,0 +1,233 @@
+{
+  "name": "ClaudeCode GitHub Issue Template",
+  "description": "Template for creating structured GitHub issues for ClaudeCode project management",
+  "version": "1.0.0",
+  "template_type": "github_issue",
+  "fields": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "Clear, concise issue title",
+      "examples": [
+        "Bug: Configuration validation fails with YAML syntax error",
+        "Feature: Add support for custom workflow templates",
+        "Enhancement: Improve checkpoint recovery performance"
+      ]
+    },
+    "issue_type": {
+      "type": "select",
+      "required": true,
+      "options": [
+        "bug",
+        "feature",
+        "enhancement",
+        "documentation",
+        "refactor",
+        "performance",
+        "security",
+        "task"
+      ],
+      "description": "Type of issue being reported"
+    },
+    "priority": {
+      "type": "select",
+      "required": true,
+      "options": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ],
+      "description": "Issue priority level"
+    },
+    "phase": {
+      "type": "select",
+      "required": false,
+      "options": [
+        "P1.1",
+        "P1.2",
+        "P1.3",
+        "P2.1",
+        "P2.2",
+        "P2.3",
+        "P3.1",
+        "P3.2",
+        "P3.3",
+        "P4.1",
+        "P4.2",
+        "P4.3",
+        "P5.1",
+        "P5.2",
+        "P5.3"
+      ],
+      "description": "Related implementation phase"
+    },
+    "description": {
+      "type": "textarea",
+      "required": true,
+      "description": "Detailed description of the issue",
+      "template": "## Description\n\nClear description of the issue, feature request, or task.\n\n## Expected Behavior\n\nWhat should happen?\n\n## Actual Behavior\n\n(For bugs) What actually happens?\n\n## Steps to Reproduce\n\n(For bugs)\n1. Step one\n2. Step two\n3. Step three\n\n## Additional Context\n\nAny additional information, screenshots, or context."
+    },
+    "acceptance_criteria": {
+      "type": "textarea",
+      "required": false,
+      "description": "Definition of done for this issue",
+      "template": "## Acceptance Criteria\n\n- [ ] Criterion 1\n- [ ] Criterion 2\n- [ ] Criterion 3\n- [ ] Tests written and passing\n- [ ] Documentation updated\n- [ ] Code reviewed and approved"
+    },
+    "technical_details": {
+      "type": "textarea",
+      "required": false,
+      "description": "Technical implementation details",
+      "template": "## Technical Details\n\n**Affected Components:**\n- Component 1\n- Component 2\n\n**Proposed Solution:**\nBrief technical approach\n\n**Dependencies:**\n- Dependency 1\n- Dependency 2\n\n**Risks/Considerations:**\n- Risk 1\n- Risk 2"
+    },
+    "environment": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "os": {
+          "type": "string",
+          "description": "Operating system",
+          "examples": ["macOS 14.0", "Ubuntu 22.04", "Windows 11"]
+        },
+        "python_version": {
+          "type": "string",
+          "description": "Python version",
+          "examples": ["3.9.0", "3.10.5", "3.11.2"]
+        },
+        "claudecode_version": {
+          "type": "string",
+          "description": "ClaudeCode version",
+          "examples": ["2.0.0", "2.1.0-beta"]
+        }
+      }
+    },
+    "labels": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "string",
+        "enum": [
+          "bug",
+          "feature",
+          "enhancement",
+          "documentation",
+          "good-first-issue",
+          "help-wanted",
+          "priority-critical",
+          "priority-high",
+          "priority-medium",
+          "priority-low",
+          "phase-1",
+          "phase-2",
+          "phase-3",
+          "phase-4",
+          "phase-5",
+          "config-validation",
+          "progress-tracking",
+          "workflow-engine",
+          "template-system",
+          "checkpoint-recovery"
+        ]
+      },
+      "description": "GitHub labels to apply"
+    },
+    "assignees": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "string"
+      },
+      "description": "GitHub usernames to assign"
+    },
+    "milestone": {
+      "type": "string",
+      "required": false,
+      "description": "Project milestone",
+      "examples": [
+        "Phase 1: Foundation",
+        "Phase 2: Core Features",
+        "Phase 3: Advanced Features",
+        "v2.0.0 Release",
+        "v2.1.0 Release"
+      ]
+    }
+  },
+  "templates": {
+    "bug_report": {
+      "title": "Bug: {summary}",
+      "issue_type": "bug",
+      "description": "## Bug Description\n\n{description}\n\n## Steps to Reproduce\n\n1. {step1}\n2. {step2}\n3. {step3}\n\n## Expected Behavior\n\n{expected}\n\n## Actual Behavior\n\n{actual}\n\n## Environment\n\n- OS: {os}\n- Python: {python_version}\n- ClaudeCode: {claudecode_version}\n\n## Additional Context\n\n{context}",
+      "labels": ["bug"]
+    },
+    "feature_request": {
+      "title": "Feature: {summary}",
+      "issue_type": "feature",
+      "description": "## Feature Description\n\n{description}\n\n## Use Case\n\n{use_case}\n\n## Proposed Solution\n\n{solution}\n\n## Alternatives Considered\n\n{alternatives}\n\n## Additional Context\n\n{context}",
+      "labels": ["feature"]
+    },
+    "task": {
+      "title": "Task: {summary}",
+      "issue_type": "task",
+      "description": "## Task Description\n\n{description}\n\n## Requirements\n\n{requirements}\n\n## Deliverables\n\n{deliverables}\n\n## Timeline\n\n{timeline}",
+      "acceptance_criteria": "## Acceptance Criteria\n\n- [ ] {criteria1}\n- [ ] {criteria2}\n- [ ] {criteria3}\n- [ ] Tests written and passing\n- [ ] Documentation updated\n- [ ] Code reviewed and approved",
+      "labels": ["task"]
+    },
+    "enhancement": {
+      "title": "Enhancement: {summary}",
+      "issue_type": "enhancement",
+      "description": "## Enhancement Description\n\n{description}\n\n## Current Behavior\n\n{current}\n\n## Proposed Enhancement\n\n{proposed}\n\n## Benefits\n\n{benefits}\n\n## Implementation Notes\n\n{implementation}",
+      "labels": ["enhancement"]
+    }
+  },
+  "automation": {
+    "label_rules": [
+      {
+        "condition": "issue_type == 'bug'",
+        "action": "add_label",
+        "value": "bug"
+      },
+      {
+        "condition": "priority == 'critical'",
+        "action": "add_label",
+        "value": "priority-critical"
+      },
+      {
+        "condition": "phase.startswith('P1')",
+        "action": "add_label",
+        "value": "phase-1"
+      }
+    ],
+    "assignment_rules": [
+      {
+        "condition": "issue_type == 'security'",
+        "action": "assign",
+        "value": ["security-team"]
+      },
+      {
+        "condition": "labels.includes('good-first-issue')",
+        "action": "add_comment",
+        "value": "Thanks for contributing! This issue is marked as a good first issue. Please feel free to ask questions if you need help getting started."
+      }
+    ]
+  },
+  "validation": {
+    "required_fields": ["title", "issue_type", "priority", "description"],
+    "title_min_length": 10,
+    "title_max_length": 100,
+    "description_min_length": 50,
+    "allowed_priorities": ["critical", "high", "medium", "low"],
+    "allowed_types": ["bug", "feature", "enhancement", "documentation", "refactor", "performance", "security", "task"]
+  },
+  "metadata": {
+    "created_by": "ClaudeCode Configuration System",
+    "created_date": "2024-12-17",
+    "last_updated": "2024-12-17",
+    "version_history": [
+      {
+        "version": "1.0.0",
+        "date": "2024-12-17",
+        "changes": "Initial template creation with comprehensive issue structure"
+      }
+    ]
+  }
+}

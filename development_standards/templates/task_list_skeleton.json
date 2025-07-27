@@ -1,0 +1,83 @@
+{
+  "id": "task_list_skeleton",
+  "category": "template",
+  "priority": 35,
+  "version": "1.0",
+  "description": "Base structure for implementation task lists derived from PRDs. Used as a scaffold when dynamically generating phased task breakdowns.",
+  "task_list": {
+    "relevant_files": [
+      {
+        "path": "src/components/UserProfileForm.tsx",
+        "description": "Main form logic and validation",
+        "test": "src/components/UserProfileForm.test.tsx"
+      },
+      {
+        "path": "api/user/update.ts",
+        "description": "API handler for profile changes",
+        "test": "api/user/update.test.ts"
+      },
+      {
+        "path": "lib/hooks/useUserData.ts",
+        "description": "Reusable data fetching logic",
+        "test": "lib/hooks/useUserData.test.ts"
+      }
+    ],
+    "tasks": [
+      {
+        "label": "Create User Profile Editing Form",
+        "status": "pending",
+        "subtasks": [
+          { "label": "Define form fields from PRD", "status": "pending" },
+          { "label": "Implement client-side validation", "status": "pending" },
+          { "label": "Ensure accessibility compliance", "status": "pending" },
+          { "label": "Wire form submission to API", "status": "pending" }
+        ]
+      },
+      {
+        "label": "Implement Backend Update Endpoint",
+        "status": "pending",
+        "subtasks": [
+          { "label": "Accept payload via POST `/api/user/update`", "status": "pending" },
+          { "label": "Validate incoming data server-side", "status": "pending" },
+          { "label": "Persist changes to database", "status": "pending" },
+          { "label": "Return success/error response", "status": "pending" }
+        ]
+      },
+      {
+        "label": "Add Unit and Integration Tests",
+        "status": "pending",
+        "subtasks": [
+          { "label": "Write component tests using Jest", "status": "pending" },
+          { "label": "Write API endpoint tests using supertest", "status": "pending" },
+          { "label": "Include edge case scenarios", "status": "pending" }
+        ]
+      },
+      {
+        "label": "Design Review and Refactoring",
+        "status": "pending",
+        "subtasks": [
+          { "label": "Request feedback on UX layout", "status": "pending" },
+          { "label": "Refactor state handling logic", "status": "pending" }
+        ]
+      },
+      {
+        "label": "Update Documentation",
+        "status": "pending",
+        "subtasks": [
+          { "label": "Update README with feature overview", "status": "pending" },
+          { "label": "Create CHANGELOG entry", "status": "pending" }
+        ]
+      }
+    ]
+  },
+  "status_metadata": {
+    "allowed_states": ["pending", "in_progress", "blocked", "completed", "cancelled"],
+    "visual_indicators": {
+      "pending": "- [ ]",
+      "in_progress": "- [ ] 🚧",
+      "blocked": "- [ ] 🔒",
+      "completed": "- [x]",
+      "cancelled": "- [ ] ❌"
+    }
+  }
+}

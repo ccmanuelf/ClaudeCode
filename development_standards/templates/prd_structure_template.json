@@ -1,0 +1,15 @@
+{
+  "title": "{{project_name}} PRD",
+  "sections": [
+    "App Overview and Objectives",
+    "Target Audience",
+    "Core Features and Functionality",
+    "Technical Stack Recommendations",
+    "Conceptual Data Model",
+    "UI Design Principles",
+    "Security Considerations",
+    "Development Phases and Milestones",
+    "Challenges and Solutions",
+    "Expansion Possibilities"
+  ]
+}

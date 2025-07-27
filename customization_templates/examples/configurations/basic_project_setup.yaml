@@ -1,0 +1,307 @@
+# ClaudeCode Basic Project Setup Configuration
+# Example configuration for a standard software development project
+# Copy this file to your project root as config.yaml and customize as needed
+
+# Project Information
+project:
+  name: "MyProject"
+  type: "web_application"  # web_application, api, library, mobile_app, data_science
+  language: "python"
+  framework: "flask"  # flask, django, fastapi, react, vue, etc.
+
+# Core AI Persona Configuration
+persona:
+  - agent-config/persona/professor_spark.md
+  - agent-config/persona/prd_creation_agent.md
+  - agent-config/persona/interaction_protocols.md
+
+# Prompt Engineering Framework
+prompts:
+  - agent-config/prompts/prd_question_framework.md
+  - agent-config/prompts/questions_framework.md
+  - agent-config/prompts/task_list_interactions.md
+  - agent-config/prompts/task_planning_phrases.md
+  - agent-config/prompts/brainstorming_framework.md
+
+# Development Guardrails & Quality Control
+guardrails:
+  - agent-config/guardrails/mode_behavior_control.md
+  - agent-config/guardrails/no_code_generation.md
+  - agent-config/guardrails/response_length_control.md
+  - agent-config/guardrails/task_execution_protocol.md
+  - agent-config/guardrails/require_confirmation_before_detail.md
+  - agent-config/guardrails/use_tools_when_available.md
+  - agent-config/guardrails/development_standards.md
+  - agent-config/guardrails/testing_coverage_requirements.md
+
+# Progress Continuity System
+progress_continuity:
+  - progress-state/MASTER_IMPLEMENTATION_PLAN.md
+  - progress-state/PROGRESS_STATE.json
+  - progress-state/SESSION_RESUME.md
+  - progress-state/RESUME_COMMANDS.md
+  - progress-state/CHECKPOINT_SYSTEM.md
+
+# AI Behavior & Cognitive Management
+behaviors:
+  - agent-config/behaviors/framework_orchestration.md
+  - agent-config/behaviors/tool_usage_prioritization.md
+  - agent-config/behaviors/task_lifecycle.md
+  - agent-config/behaviors/context_management.md
+  - agent-config/behaviors/session_management.md
+
+# Development Workflow Engine
+workflows:
+  - agent-config/workflows/00_project_initialization.md
+  - agent-config/workflows/00_validate_dev_setup.md
+  - agent-config/workflows/01_create_prd_from_idea.md
+  - agent-config/workflows/02_generate_prd_file.md
+  - agent-config/workflows/03_generate_task_list.md
+  - agent-config/workflows/04_specs_driven_development.md
+  - agent-config/workflows/05_test_driven_development.md
+  - agent-config/workflows/06_github_integration.md
+
+# Template & Code Generation Framework
+templates:
+  - agent-config/templates/task_list_skeleton.json
+  - agent-config/templates/analysis_framework_selector.json
+  - agent-config/templates/prd_structure_template.json
+  - agent-config/templates/github_issue_template.json
+  - agent-config/templates/spec_template.json
+  - agent-config/templates/test_template.json
+
+# Command Templates for AI Operations
+command_templates:
+  - agent-config/command_templates/do_task_template.md
+  - agent-config/command_templates/planning_template.md
+  - agent-config/command_templates/issue_creation_template.md
+  - agent-config/command_templates/session_summary_template.md
+
+# Dynamic Task Management
+tasks:
+  # Tasks will be created dynamically as you work
+  # Pattern: tasks/[type]-[feature-name]-[timestamp].md
+  enabled: true
+  auto_cleanup: true
+  retention_days: 90
+
+# Progress State Management
+progress_state:
+  enabled: true
+  state_file: "progress-state/PROGRESS_STATE.json"
+  checkpoint_frequency: 30  # minutes
+  auto_resume: true
+  recovery_enabled: true
+  max_checkpoints: 50
+
+# Feature Development Tracking
+features:
+  # Generated feature files will appear here
+  # Pattern: features/[feature-name]-[status].md
+  auto_tracking: true
+  status_updates: true
+
+# Session & Development Logs
+logs:
+  session_tracking: true
+  detailed_logging: false  # Set to true for debugging
+  log_retention_days: 30
+  performance_tracking: true
+
+# AI Engineering Methodologies Integration
+methodologies:
+  specs_driven_development:
+    enabled: true
+    template: templates/spec_template.json
+    workflow: workflows/04_specs_driven_development.md
+    auto_generate_specs: false
+
+  test_driven_development:
+    enabled: true
+    workflow: workflows/05_test_driven_development.md
+    test_template: templates/test_template.json
+    min_coverage: 80
+
+  context_engineering:
+    enabled: true
+    behavior: behaviors/context_management.md
+    cache_enabled: true
+    max_context_size: 10000
+
+  github_integration:
+    enabled: false  # Enable when you have GitHub token
+    workflow: workflows/06_github_integration.md
+    issue_template: templates/github_issue_template.json
+    auto_create_issues: false
+
+# System Configuration
+system:
+  version: "2.0"
+  mode: "standard"  # lite | standard | pro
+  cache_enabled: true
+  validation_enabled: true
+  auto_documentation: true
+  performance_monitoring: true
+
+# Quality Gates Configuration
+quality_gates:
+  pre_commit_required: false  # Set to true for strict mode
+  test_coverage_minimum: 80
+  linting_required: false     # Enable for mature projects
+  documentation_required: true
+  spec_validation_required: false
+
+# Integration Points
+integrations:
+  github:
+    enabled: false  # Set to true when GitHub token available
+    repository_pattern: "your-org/your-repo"
+    issue_automation: false
+    pr_automation: false
+
+  testing:
+    framework: "pytest"  # pytest, unittest, jest, etc.
+    coverage_tool: "pytest-cov"
+    tdd_enforced: false
+    auto_run_tests: false
+
+  documentation:
+    auto_generation: true
+    format: "markdown"
+    api_docs: false
+    include_examples: true
+
+# Development Environment
+environment:
+  python:
+    package_manager: "pip"  # pip, pipenv, poetry, conda
+    version_minimum: "3.8"
+    virtual_env: true
+
+  git:
+    pre_commit_enforced: false
+    branch_protection: false
+    commit_standards: false
+
+  editor:
+    config_file: ".editorconfig"
+    extensions_recommended: false
+
+# AI Command Registry
+commands:
+  # Analysis Commands
+  analyze: "agent-config/workflows/04_specs_driven_development.md"
+  plan: "agent-config/command_templates/planning_template.md"
+  spec: "agent-config/templates/spec_template.json"
+
+  # Development Commands
+  tdd: "agent-config/workflows/05_test_driven_development.md"
+  init: "agent-config/workflows/00_project_initialization.md"
+  validate: "agent-config/workflows/00_validate_dev_setup.md"
+
+  # Integration Commands
+  github: "agent-config/workflows/06_github_integration.md"
+  issue: "agent-config/templates/github_issue_template.json"
+
+  # Session Management
+  start: "agent-config/behaviors/session_management.md"
+  summary: "agent-config/command_templates/session_summary_template.md"
+  context: "agent-config/behaviors/context_management.md"
+
+  # Progress Continuity Commands
+  resume_progress: "progress-state/RESUME_COMMANDS.md"
+  checkpoint_save: "progress-state/CHECKPOINT_SYSTEM.md"
+  progress_status: "progress-state/SESSION_RESUME.md"
+  session_handoff: "progress-state/SESSION_RESUME.md"
+  emergency_handoff: "progress-state/CHECKPOINT_SYSTEM.md"
+  recover_from_checkpoint: "progress-state/CHECKPOINT_SYSTEM.md"
+  analyze_blocker: "progress-state/RESUME_COMMANDS.md"
+
+# Monitoring & Analytics
+monitoring:
+  session_tracking: true
+  performance_metrics: true
+  error_logging: true
+  usage_analytics: false  # Enable for team analytics
+
+# Security & Compliance
+security:
+  api_key_protection: true
+  sensitive_data_filtering: true
+  audit_logging: false      # Enable for compliance requirements
+  access_control: false
+
+# Project-Specific Customizations
+customizations:
+  # Add your project-specific settings here
+  # Example:
+  # api_base_url: "https://api.myproject.com"
+  # database_url: "${DATABASE_URL}"
+  # debug_mode: false
+
+# Team Configuration (Optional)
+team:
+  # Uncomment and configure for team projects
+  # members:
+  #   - name: "Alice Developer"
+  #     role: "lead"
+  #     github: "alice-dev"
+  #   - name: "Bob Developer"
+  #     role: "developer"
+  #     github: "bob-codes"
+
+  # handoff_protocol:
+  #   required_checkpoint_description: true
+  #   session_summary_required: true
+  #   notification_channels: ["slack", "email"]
+
+# Deployment Configuration (Optional)
+deployment:
+  # Uncomment for deployment integration
+  # environments:
+  #   - name: "development"
+  #     auto_deploy: false
+  #   - name: "staging"
+  #     auto_deploy: false
+  #   - name: "production"
+  #     auto_deploy: false
+  #     approval_required: true
+
+# Backup and Recovery
+backup:
+  enabled: true
+  frequency: "daily"  # hourly, daily, weekly
+  retention_days: 30
+  include_progress_state: true
+  include_checkpoints: true
+  exclude_patterns:
+    - "*.tmp"
+    - "node_modules/"
+    - "__pycache__/"
+    - ".venv/"
+
+# Notification Settings
+notifications:
+  enabled: false  # Enable for team notifications
+  # channels:
+  #   slack:
+  #     webhook_url: "${SLACK_WEBHOOK_URL}"
+  #     notify_on: ["checkpoint", "completion", "error"]
+  #   email:
+  #     smtp_server: "smtp.gmail.com"
+  #     notify_on: ["daily_summary", "milestone"]
+
+# Performance Tuning
+performance:
+  checkpoint_compression: true
+  async_operations: false
+  cache_size_mb: 100
+  max_concurrent_operations: 3
+  cleanup_frequency: "weekly"
+
+# Debug and Development
+debug:
+  enabled: false  # Only enable for troubleshooting
+  verbose_logging: false
+  trace_operations: false
+  preserve_temp_files: false

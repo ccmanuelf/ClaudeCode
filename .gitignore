@@ -1,0 +1,108 @@
+# ClaudeCode Framework .gitignore
+# Excludes personal data, runtime files, and system-generated content
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Personal Progress Tracking (Contains session-specific data)
+project_management/progress_tracking/PROGRESS_STATE.json
+project_management/progress_tracking/checkpoints/*.json
+project_management/progress_tracking/snapshots/
+project_management/progress_tracking/backups/
+project_management/progress_tracking/*.log
+
+# Personal Workspace (Individual development work)
+workspace/projects/*/
+workspace/sessions/*/
+workspace/snippets/*/
+workspace/references/*/
+
+# Keep workspace structure but ignore contents
+!workspace/projects/.gitkeep
+!workspace/sessions/.gitkeep
+!workspace/snippets/.gitkeep
+!workspace/references/.gitkeep
+
+# Log Files
+*.log
+logs/
+project_management/logs/*.md
+
+# Personal Configuration Overrides
+*_personal.yaml
+*_personal.yml
+*_local.yaml
+*_local.yml
+config_local.*
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# API Keys and Secrets
+.env
+.env.local
+.env.*.local
+*.key
+secrets/
+api_keys/
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Personal Notes and Drafts
+NOTES.md
+DRAFT_*.md
+TODO_personal.md
+*_scratch.*
+
+# AI Provider Specific Cache
+.anthropic/
+.openai/
+.google/
+.gemini/
+claude_cache/
+gpt_cache/
+
+# Runtime Generated Content
+auto_generated/
+generated_*.md
+*_generated.*
+
+# Personal Task Files (May contain sensitive project info)
+project_management/tasks/*_personal_*.md
+development_standards/prd/PRD_*_personal_*.md
+
+# Keep framework structure intact
+!*/README.md
+!*/.gitkeep

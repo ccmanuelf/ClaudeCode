@@ -1,0 +1,53 @@
+{
+  "id": "analysis_framework_selector",
+  "category": "template",
+  "priority": 40,
+  "version": "1.0",
+  "description": "Provides a mapping structure for choosing the appropriate cognitive framework for reasoning tasks based on input complexity, user intent, and mode settings.",
+  "framework_map": [
+    {
+      "trigger": "simple planning request",
+      "preferred_framework": "chain_of_reason_lite",
+      "modes": ["lite"],
+      "fallback": "tree_of_thoughts_lite"
+    },
+    {
+      "trigger": "multi-step strategic analysis",
+      "preferred_framework": "chain_of_reason",
+      "modes": ["standard", "pro"],
+      "fallback": "graph_of_thoughts"
+    },
+    {
+      "trigger": "exploratory reasoning with branching options",
+      "preferred_framework": "tree_of_thoughts",
+      "modes": ["standard", "pro"],
+      "fallback": "graph_of_thoughts"
+    },
+    {
+      "trigger": "relationship mapping or clustering",
+      "preferred_framework": "graph_of_thoughts",
+      "modes": ["standard", "pro"],
+      "fallback": "tree_of_thoughts"
+    },
+    {
+      "trigger": "input validation and precision scoring",
+      "preferred_framework": "filtration_analysis",
+      "modes": ["pro"],
+      "fallback": "chain_of_reason"
+    }
+  ],
+  "selection_logic": {
+    "step_1": "Determine input category: planning, analysis, exploration, scoring",
+    "step_2": "Match to trigger pattern",
+    "step_3": "Check current mode against supported modes",
+    "step_4": "Load preferred framework if matched; otherwise use fallback",
+    "step_5": "Initialize with appropriate emoji tags and configuration summary"
+  },
+  "example_usage": {
+    "input": "I want to compare two architectural approaches and map their pros and cons.",
+    "selected_framework": "tree_of_thoughts",
+    "mode": "standard",
+    "emoji_tags": ["🌳", "🌿", "⭐", "✨"],
+    "fallback_if_unavailable": "graph_of_thoughts"
+  }
+}

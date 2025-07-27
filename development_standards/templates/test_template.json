@@ -1,0 +1,417 @@
+{
+  "name": "ClaudeCode Test Template",
+  "description": "Template for creating comprehensive test suites for ClaudeCode components",
+  "version": "1.0.0",
+  "template_type": "test_suite",
+  "metadata": {
+    "created_by": "ClaudeCode Configuration System",
+    "created_date": "2024-12-17",
+    "last_updated": "2024-12-17",
+    "schema_version": "1.0"
+  },
+  "structure": {
+    "test_suite": {
+      "name": {
+        "type": "string",
+        "required": true,
+        "description": "Test suite name",
+        "pattern": "^Test[A-Z][a-zA-Z0-9_]*$",
+        "examples": ["TestConfigValidator", "TestProgressManager", "TestWorkflowEngine"]
+      },
+      "description": {
+        "type": "string",
+        "required": true,
+        "description": "Brief description of what this test suite covers"
+      },
+      "component_under_test": {
+        "type": "string",
+        "required": true,
+        "description": "The main component or module being tested"
+      },
+      "test_categories": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "string",
+          "enum": ["unit", "integration", "system", "performance", "security", "usability"]
+        },
+        "description": "Types of tests in this suite"
+      }
+    },
+    "setup": {
+      "fixtures": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Fixture name"
+            },
+            "scope": {
+              "type": "string",
+              "enum": ["function", "class", "module", "session"],
+              "description": "Fixture scope"
+            },
+            "description": {
+              "type": "string",
+              "description": "What this fixture provides"
+            },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Other fixtures this depends on"
+            }
+          },
+          "required": ["name", "scope", "description"]
+        }
+      },
+      "test_data": {
+        "type": "object",
+        "required": false,
+        "description": "Test data files and their purposes",
+        "properties": {
+          "valid_configs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Valid configuration files for testing"
+          },
+          "invalid_configs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Invalid configuration files for negative testing"
+          },
+          "sample_data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Sample data files"
+          }
+        }
+      },
+      "mocks": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "target": {
+              "type": "string",
+              "description": "What is being mocked"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Why this needs to be mocked"
+            },
+            "behavior": {
+              "type": "string",
+              "description": "How the mock behaves"
+            }
+          },
+          "required": ["target", "reason"]
+        }
+      }
+    },
+    "test_cases": {
+      "unit_tests": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "test_id": {
+              "type": "string",
+              "pattern": "^test_[a-z0-9_]+$",
+              "description": "Test method name"
+            },
+            "description": {
+              "type": "string",
+              "description": "What this test verifies"
+            },
+            "function_under_test": {
+              "type": "string",
+              "description": "Specific function being tested"
+            },
+            "test_type": {
+              "type": "string",
+              "enum": ["positive", "negative", "edge_case", "boundary"],
+              "description": "Type of test case"
+            },
+            "preconditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Setup required before test"
+            },
+            "test_steps": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Test execution steps"
+            },
+            "expected_result": {
+              "type": "string",
+              "description": "Expected test outcome"
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Specific assertions to make"
+            },
+            "cleanup": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Cleanup steps after test"
+            },
+            "priority": {
+              "type": "string",
+              "enum": ["high", "medium", "low"],
+              "description": "Test priority"
+            }
+          },
+          "required": ["test_id", "description", "expected_result"]
+        }
+      },
+      "integration_tests": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "test_id": {
+              "type": "string",
+              "pattern": "^test_integration_[a-z0-9_]+$"
+            },
+            "description": {
+              "type": "string"
+            },
+            "components": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Components being tested together"
+            },
+            "scenario": {
+              "type": "string",
+              "description": "Integration scenario being tested"
+            },
+            "data_flow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Expected data flow between components"
+            },
+            "test_steps": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_result": {
+              "type": "string"
+            },
+            "error_conditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Error conditions to test"
+            }
+          },
+          "required": ["test_id", "description", "components", "expected_result"]
+        }
+      },
+      "performance_tests": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "test_id": {
+              "type": "string",
+              "pattern": "^test_perf_[a-z0-9_]+$"
+            },
+            "description": {
+              "type": "string"
+            },
+            "performance_metric": {
+              "type": "string",
+              "enum": ["response_time", "throughput", "memory_usage", "cpu_usage", "concurrent_users"],
+              "description": "What performance aspect is being measured"
+            },
+            "load_profile": {
+              "type": "object",
+              "properties": {
+                "users": {
+                  "type": "integer",
+                  "description": "Number of concurrent users"
+                },
+                "duration": {
+                  "type": "string",
+                  "description": "Test duration"
+                },
+                "ramp_up": {
+                  "type": "string",
+                  "description": "Time to reach full load"
+                }
+              }
+            },
+            "success_criteria": {
+              "type": "object",
+              "properties": {
+                "max_response_time": {
+                  "type": "string"
+                },
+                "min_throughput": {
+                  "type": "string"
+                },
+                "max_error_rate": {
+                  "type": "string"
+                }
+              }
+            },
+            "baseline": {
+              "type": "string",
+              "description": "Performance baseline for comparison"
+            }
+          },
+          "required": ["test_id", "description", "performance_metric", "success_criteria"]
+        }
+      }
+    },
+    "test_configuration": {
+      "framework": {
+        "type": "string",
+        "enum": ["pytest", "unittest", "nose2"],
+        "default": "pytest",
+        "description": "Testing framework to use"
+      },
+      "coverage_target": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100,
+        "default": 90,
+        "description": "Target code coverage percentage"
+      },
+      "timeout": {
+        "type": "integer",
+        "default": 300,
+        "description": "Test timeout in seconds"
+      },
+      "parallel_execution": {
+        "type": "boolean",
+        "default": false,
+        "description": "Whether to run tests in parallel"
+      },
+      "test_markers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "description": "Custom test markers"
+      }
+    },
+    "reporting": {
+      "formats": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["junit", "html", "json", "console"]
+        },
+        "default": ["console", "html"],
+        "description": "Test report formats"
+      },
+      "coverage_formats": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["html", "xml", "json", "console"]
+        },
+        "default": ["html", "console"],
+        "description": "Coverage report formats"
+      },
+      "output_directory": {
+        "type": "string",
+        "default": "test_reports",
+        "description": "Directory for test reports"
+      }
+    }
+  },
+  "templates": {
+    "unit_test_class": {
+      "template": "class Test{ComponentName}:\n    \"\"\"Test suite for {component_name} component.\"\"\"\n    \n    @pytest.fixture\n    def {fixture_name}(self):\n        \"\"\"Setup {component_name} for testing.\"\"\"\n        # Setup code here\n        yield setup_object\n        # Cleanup code here\n    \n    def test_{function_name}_success(self, {fixture_name}):\n        \"\"\"Test {function_name} with valid input.\"\"\"\n        # Arrange\n        # Act\n        # Assert\n        pass\n    \n    def test_{function_name}_invalid_input(self, {fixture_name}):\n        \"\"\"Test {function_name} with invalid input.\"\"\"\n        # Arrange\n        # Act & Assert\n        with pytest.raises(ExpectedException):\n            # Code that should raise exception\n            pass"
+    },
+    "integration_test_class": {
+      "template": "class TestIntegration{ComponentName}:\n    \"\"\"Integration tests for {component_name}.\"\"\"\n    \n    @pytest.fixture(scope='class')\n    def integration_setup(self):\n        \"\"\"Setup integration test environment.\"\"\"\n        # Setup multiple components\n        yield components\n        # Cleanup\n    \n    def test_{scenario_name}(self, integration_setup):\n        \"\"\"Test {scenario_description}.\"\"\"\n        # Test component interaction\n        pass"
+    },
+    "performance_test_class": {
+      "template": "class TestPerformance{ComponentName}:\n    \"\"\"Performance tests for {component_name}.\"\"\"\n    \n    @pytest.mark.performance\n    def test_{metric_name}_performance(self, benchmark):\n        \"\"\"Test {component_name} {metric_name} performance.\"\"\"\n        result = benchmark({function_to_test})\n        assert result is not None"
+    }
+  },
+  "best_practices": {
+    "naming_conventions": [
+      "Test classes start with 'Test'",
+      "Test methods start with 'test_'",
+      "Use descriptive test names that explain the scenario",
+      "Follow arrange-act-assert pattern",
+      "Group related tests in the same class"
+    ],
+    "test_structure": [
+      "One assertion per test method when possible",
+      "Test both positive and negative cases",
+      "Include edge cases and boundary conditions",
+      "Mock external dependencies",
+      "Clean up test data after each test"
+    ],
+    "performance_testing": [
+      "Establish performance baselines",
+      "Test under realistic load conditions",
+      "Monitor memory usage during tests",
+      "Include stress tests for critical components",
+      "Document performance requirements"
+    ]
+  },
+  "automation": {
+    "ci_integration": {
+      "run_on_commit": true,
+      "run_on_pr": true,
+      "fail_on_coverage_drop": true,
+      "parallel_execution": true
+    },
+    "test_generation": {
+      "auto_generate_basic_tests": true,
+      "include_docstring_examples": true,
+      "generate_property_tests": false
+    }
+  },
+  "quality_gates": {
+    "minimum_coverage": 90,
+    "maximum_test_duration": "5 minutes",
+    "maximum_flaky_test_rate": "1%",
+    "required_test_categories": ["unit", "integration"]
+  }
+}

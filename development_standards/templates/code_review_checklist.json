@@ -1,0 +1,60 @@
+{
+  "id": "code_review_checklist",
+  "category": "template",
+  "priority": 40,
+  "version": "1.0",
+  "description": "Reusable checklist for code reviews aligned with Spark's quality, safety, and traceability protocols.",
+  "checklist": {
+    "style": {
+      "type_hints": true,
+      "line_length": "≤ 88 chars",
+      "naming_conventions": ["snake_case", "PascalCase", "UPPER_SNAKE_CASE"],
+      "docstrings": "Required for public APIs",
+      "anchor_comments": "Preserved or updated if relevant"
+    },
+    "structure": {
+      "functions_small_focused": true,
+      "early_returns_used": true,
+      "descriptive_names": true,
+      "functional_style_preferred": true
+    },
+    "testing": {
+      "new_features_tested": true,
+      "bugfixes_regression_tested": true,
+      "mock_vs_real_data_explained": true,
+      "async_tests_use_anyio": "Recommended",
+      "test_placement_mirrored": true
+    },
+    "refactor": {
+      "duplication_removed": true,
+      "contracts_preserved": true,
+      "side_effects_scoped": true,
+      "anchor_comments_added": true
+    },
+    "security": {
+      "no hardcoded secrets": true,
+      "least privilege IAM": true,
+      "public access restricted": true,
+      "logging and backup enabled": true,
+      "encryption verified (at rest/in transit)": true
+    },
+    "coordination": {
+      "multi-file scanning": true,
+      "references updated": true,
+      "completeness verified": true,
+      "dependency order followed": true
+    },
+    "commits": {
+      "no co-authored/tool trailers": true,
+      "Reported-by and Github-Issue trailers used": "When applicable",
+      "formatters + linters run": true,
+      "git status clean": true
+    },
+    "ethics": {
+      "tests unmodified to pass logic": false,
+      "no API contract violations": true,
+      "no migration edits": true,
+      "comments preserved unless approved": true
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "domain_glossary",
+  "category": "template",
+  "priority": 45,
+  "version": "1.0",
+  "description": "Canonical definitions for Spark-related concepts and development terms across agent workflows.",
+  "terms": [
+    {
+      "term": "Agent",
+      "definition": "AI entity with memory, tools, and defined behavior used to accomplish complex tasks via workflow orchestration."
+    },
+    {
+      "term": "Task",
+      "definition": "Declarative workflow composed of multiple steps or subtasks. Not to be confused with background job runners like Celery tasks."
+    },
+    {
+      "term": "Execution",
+      "definition": "Runtime instance of a Task, potentially stateful and trackable across sessions or replays."
+    },
+    {
+      "term": "Tool",
+      "definition": "Function or external capability callable by an Agent (e.g., web search, file system, browser, code interpreter)."
+    },
+    {
+      "term": "Session",
+      "definition": "Conversation context window containing memory, user interactions, and agent responses. Can be stateful across turns."
+    },
+    {
+      "term": "Entry",
+      "definition": "Single interaction within a session—either a user prompt or agent response. Forms atomic units of session history."
+    },
+    {
+      "term": "Anchor Comment",
+      "definition": "Inline comment marked with `AIDEV-NOTE:`, `AIDEV-TODO:`, or `AIDEV-QUESTION:` for signaling intent, concern, or complexity to developers or agents."
+    },
+    {
+      "term": "Reasoning Framework",
+      "definition": "Cognitive pattern (Chain, Tree, Graph, Filtration) used to structure Spark’s thinking and output formation based on mode and task type."
+    },
+    {
+      "term": "PRD",
+      "definition": "Product Requirements Document—a structured markdown artifact describing the goals, features, risks, and acceptance criteria of a system component."
+    },
+    {
+      "term": "Mode",
+      "definition": "Configuration setting controlling verbosity, reasoning depth, and framework selection. Includes `lite`, `standard`, and `pro` tiers."
+    }
+  ]
+}

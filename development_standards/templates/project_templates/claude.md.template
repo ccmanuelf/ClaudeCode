@@ -1,0 +1,263 @@
+# Claude AI Development Partner Configuration
+
+## Project: {{PROJECT_NAME}}
+
+This file configures the AI development partner for this project, establishing context, preferences, development standards, and workflow integration for optimal AI-assisted development.
+
+---
+
+## 🎯 Project Overview
+
+### Project Purpose
+**What this project does:**
+{{PROJECT_DESCRIPTION}}
+
+### Target Audience
+**Who will use this:**
+{{TARGET_AUDIENCE}}
+
+### Success Metrics
+**How we measure success:**
+{{SUCCESS_METRICS}}
+
+---
+
+## 🏗️ Technical Context
+
+### Technology Stack
+```
+Primary Language: {{PRIMARY_LANGUAGE}}
+Framework: {{FRAMEWORK}}
+Database: {{DATABASE}}
+Infrastructure: {{INFRASTRUCTURE}}
+Key Dependencies: {{KEY_DEPENDENCIES}}
+```
+
+### Architecture Overview
+**System Design:**
+{{ARCHITECTURE_DESCRIPTION}}
+
+### Key Components
+{{COMPONENT_LIST}}
+
+---
+
+## 📋 Development Standards
+
+### Code Quality Requirements
+- **Test Coverage**: Minimum {{TEST_COVERAGE}}% coverage required
+- **Code Style**: Follow {{CODE_STYLE_GUIDE}} standards
+- **Documentation**: All public APIs must be documented
+- **Performance**: Response times under {{PERFORMANCE_REQUIREMENT}}
+
+### Git Workflow
+- **Branch Strategy**: {{BRANCH_STRATEGY}}
+- **Commit Messages**: Use conventional commit format
+- **Code Review**: All changes require peer review
+- **Pre-commit Hooks**: Must pass all quality gates
+
+### Testing Strategy
+- **Unit Tests**: Test all business logic
+- **Integration Tests**: Test component interactions
+- **E2E Tests**: Test critical user journeys
+- **Performance Tests**: Validate scalability requirements
+
+---
+
+## 🤖 AI Development Preferences
+
+### Communication Style
+- **Detail Level**: {{PREFERRED_DETAIL_LEVEL}} (concise/balanced/comprehensive)
+- **Explanation Depth**: Include rationale for technical decisions
+- **Code Examples**: Provide working examples with explanations
+- **Error Handling**: Suggest robust error handling patterns
+
+### Workflow Integration
+- **Primary Methodology**: Specs-Driven Development
+- **Secondary Methodology**: Test-Driven Development
+- **Context Management**: Maintain project context across sessions
+- **Progress Tracking**: Update todo.md with completed tasks
+
+### AI Assistance Areas
+- [ ] Architecture design and review
+- [ ] Code generation and optimization
+- [ ] Testing strategy and implementation
+- [ ] Documentation creation and maintenance
+- [ ] Performance analysis and optimization
+- [ ] Security review and hardening
+
+---
+
+## 📁 Project Structure
+
+```
+{{PROJECT_NAME}}/
+├── src/                    # Source code
+├── tests/                  # Test files
+├── docs/                   # Documentation
+├── specs/                  # Feature specifications
+├── config/                 # Configuration files
+├── scripts/                # Utility scripts
+├── claude.md              # This file
+├── plan.md                # Project planning
+├── todo.md                # Task tracking
+└── README.md              # Project overview
+```
+
+---
+
+## 🔧 Project-Specific Guidelines
+
+### Naming Conventions
+- **Files**: {{FILE_NAMING_CONVENTION}}
+- **Functions**: {{FUNCTION_NAMING_CONVENTION}}
+- **Classes**: {{CLASS_NAMING_CONVENTION}}
+- **Variables**: {{VARIABLE_NAMING_CONVENTION}}
+
+### Error Handling Strategy
+{{ERROR_HANDLING_STRATEGY}}
+
+### Logging Standards
+{{LOGGING_STANDARDS}}
+
+### Security Requirements
+{{SECURITY_REQUIREMENTS}}
+
+### Performance Considerations
+{{PERFORMANCE_CONSIDERATIONS}}
+
+---
+
+## 📊 Quality Gates
+
+### Pre-Commit Checklist
+- [ ] All tests pass
+- [ ] Code coverage meets requirements
+- [ ] Linting and formatting applied
+- [ ] Documentation updated
+- [ ] Security scan passes
+
+### Definition of Done
+- [ ] Feature specification created/updated
+- [ ] Implementation complete and tested
+- [ ] Code review approved
+- [ ] Documentation updated
+- [ ] Performance benchmarks met
+
+---
+
+## 🚀 Quick Commands for AI Assistance
+
+### Analysis & Planning
+- `/analyze`: Perform deep analysis of current task
+- `/spec`: Create or review feature specifications
+- `/plan`: Update project planning and task breakdown
+- `/architecture`: Review system design decisions
+
+### Development Workflow
+- `/tdd`: Start test-driven development cycle
+- `/review`: Review code quality and suggest improvements
+- `/optimize`: Analyze and improve performance
+- `/security`: Perform security analysis
+
+### Documentation & Management
+- `/document`: Generate or update documentation
+- `/progress`: Review and update project progress
+- `/context`: Load relevant project context
+- `/summary`: Create session summary
+
+---
+
+## 📈 Session Management
+
+### Progress Tracking
+This project supports advanced session management:
+- **Progress Persistence**: Track progress across development sessions
+- **Context Restoration**: Restore relevant context automatically
+- **Decision Documentation**: Capture and rationale for key decisions
+- **Knowledge Accumulation**: Build project knowledge over time
+
+### Context Areas
+- **Business Logic**: {{BUSINESS_CONTEXT}}
+- **Technical Constraints**: {{TECHNICAL_CONSTRAINTS}}
+- **User Requirements**: {{USER_REQUIREMENTS}}
+- **Integration Points**: {{INTEGRATION_POINTS}}
+
+---
+
+## 🎨 Project-Specific AI Behavior
+
+### Domain-Specific Knowledge
+{{DOMAIN_KNOWLEDGE}}
+
+### Preferred Patterns
+{{PREFERRED_PATTERNS}}
+
+### Anti-Patterns to Avoid
+{{ANTI_PATTERNS}}
+
+### Integration Requirements
+{{INTEGRATION_REQUIREMENTS}}
+
+---
+
+## 📝 Notes & Reminders
+
+### Important Decisions Made
+{{IMPORTANT_DECISIONS}}
+
+### Known Issues & Workarounds
+{{KNOWN_ISSUES}}
+
+### Future Enhancements
+{{FUTURE_ENHANCEMENTS}}
+
+### External Dependencies
+{{EXTERNAL_DEPENDENCIES}}
+
+---
+
+## 🔄 Template Variables Reference
+
+When initializing a project, replace these template variables:
+
+- `{{PROJECT_NAME}}`: Name of the project
+- `{{PROJECT_DESCRIPTION}}`: Brief description of project purpose
+- `{{TARGET_AUDIENCE}}`: Who will use this project
+- `{{SUCCESS_METRICS}}`: How success is measured
+- `{{PRIMARY_LANGUAGE}}`: Main programming language
+- `{{FRAMEWORK}}`: Primary framework/library used
+- `{{DATABASE}}`: Database technology
+- `{{INFRASTRUCTURE}}`: Deployment/hosting platform
+- `{{KEY_DEPENDENCIES}}`: Major dependencies
+- `{{ARCHITECTURE_DESCRIPTION}}`: High-level architecture overview
+- `{{COMPONENT_LIST}}`: List of major system components
+- `{{TEST_COVERAGE}}`: Required test coverage percentage
+- `{{CODE_STYLE_GUIDE}}`: Code style standard (e.g., PEP8, ESLint)
+- `{{PERFORMANCE_REQUIREMENT}}`: Performance targets
+- `{{BRANCH_STRATEGY}}`: Git branching approach
+- `{{PREFERRED_DETAIL_LEVEL}}`: Communication preference
+- `{{FILE_NAMING_CONVENTION}}`: File naming pattern
+- `{{FUNCTION_NAMING_CONVENTION}}`: Function naming pattern
+- `{{CLASS_NAMING_CONVENTION}}`: Class naming pattern
+- `{{VARIABLE_NAMING_CONVENTION}}`: Variable naming pattern
+- `{{ERROR_HANDLING_STRATEGY}}`: Approach to error handling
+- `{{LOGGING_STANDARDS}}`: Logging format and levels
+- `{{SECURITY_REQUIREMENTS}}`: Security standards
+- `{{PERFORMANCE_CONSIDERATIONS}}`: Performance requirements
+- `{{BUSINESS_CONTEXT}}`: Business domain knowledge
+- `{{TECHNICAL_CONSTRAINTS}}`: Technical limitations
+- `{{USER_REQUIREMENTS}}`: User needs and expectations
+- `{{INTEGRATION_POINTS}}`: External system integrations
+- `{{DOMAIN_KNOWLEDGE}}`: Specific domain expertise needed
+- `{{PREFERRED_PATTERNS}}`: Recommended design patterns
+- `{{ANTI_PATTERNS}}`: Patterns to avoid
+- `{{INTEGRATION_REQUIREMENTS}}`: Integration specifications
+- `{{IMPORTANT_DECISIONS}}`: Key architectural decisions
+- `{{KNOWN_ISSUES}}`: Current limitations
+- `{{FUTURE_ENHANCEMENTS}}`: Planned improvements
+- `{{EXTERNAL_DEPENDENCIES}}`: Third-party services
+
+---
+
+*This configuration enables optimal AI-assisted development using ClaudeCode methodologies tailored specifically for {{PROJECT_NAME}}.*
